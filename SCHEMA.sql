@@ -31,10 +31,13 @@ create table user (
     password varchar(255) not null,
     role varchar(255) not null,
     user_name varchar(255) not null,
+    geo_lat DECIMAL(12,6),
+    geo_lng DECIMAL(12,6),
     primary key (id)) engine=InnoDB;
 
 create table pet (
     id bigint not null auto_increment,
+    type varchar(255) not null,
     name varchar(255) not null,
     user_id bigint,
     primary key (id)) engine=InnoDB;

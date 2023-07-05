@@ -5,11 +5,19 @@ import com.petsitter.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
+//@SpringBootApplication(exclude={SecurityAutoConfiguration.class})
+//@EnableAutoConfiguration(exclude = {org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class})
+//@SpringBootApplication
+@SpringBootApplication(exclude = {
+		org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
+		org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class}
+)
 public class App {
 
 	@Autowired
@@ -31,7 +39,7 @@ public class App {
 	public CommandLineRunner testDBConnectionWorks() {
 		return (args) -> {
 
-			UserEntity result = cRes.findByUserName("bob");
+			UserEntity result = cRes.findByUserName("Simon");
 
 			System.out.println("User ! " + (result != null ? result.toString() : " no user"));
 

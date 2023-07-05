@@ -25,8 +25,7 @@ public class Converter {
 
         List<PetDto> petDtos = convertPetListToDtoList(pets);
 
-        return new UserDto(entity.getId(), entity.getUserName(), petDtos
-            );
+        return new UserDto(entity.getId(), entity.getUserName(), petDtos);
     }
 
     public static List<PetDto> convertPetListToDtoList(List<PetEntity> pets) {
@@ -34,7 +33,7 @@ public class Converter {
         
         for (PetEntity petEntity : pets) {
             try {
-                petDtos.add(new PetDto(petEntity.getId(), petEntity.getName()));
+                petDtos.add(new PetDto(petEntity.getId(), petEntity.getName(), petEntity.getType()));
             }catch(Exception e) {
                 e.printStackTrace();
                 throw e;

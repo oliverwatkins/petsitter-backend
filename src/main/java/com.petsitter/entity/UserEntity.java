@@ -34,6 +34,12 @@ public class UserEntity {
 	@Column(nullable = false, unique = true)
 	private String userName;
 
+	@Column(nullable = true, unique = false, name = "geo_lat")
+	private double latitude;
+
+	@Column(nullable = true, unique = false, name = "geo_lng")
+	private double longitutde;
+
 	public UserEntity() {
 		super();
 	}

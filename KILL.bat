@@ -1,5 +1,3 @@
-echo "TODO"
-
 docker-compose down
 
 docker container stop shape-shop-back-end_db_1

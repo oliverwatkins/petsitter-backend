@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:3306/petsitter</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="petsitter-azure" uuid="63ef5392-1772-408b-8145-f59690ca508d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://shape-shop-db.mysql.database.azure.com:3306/petsitter-backend</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

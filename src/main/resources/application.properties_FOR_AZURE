@@ -1,7 +1,7 @@
 
 logging.level.org.springframework.jdbc.core=DEBUG
 
-spring.datasource.url=jdbc:mysql://shape-shop-db.mysql.database.azure.com:3306/shapeshop?useSSL=false
+spring.datasource.url=jdbc:mysql://shape-shop-db.mysql.database.azure.com:3306/petsitter-backend?useSSL=false
 spring.datasource.username=oliverwatkins
 spring.datasource.password=Tr1llion1
 
